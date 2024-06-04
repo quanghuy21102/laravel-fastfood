@@ -15,11 +15,24 @@ class LoginController extends Controller
 
     public function index()
     {
-        return view('trangdangnhap');
+        return view('login', [
+            'style' => 'css/trangdangnhap.css'
+        ]);
     }
 
     public function login(Request $request)
     {
+        $request->validate(
+            [
+                'email' => 'required|email:filter',
+                'password' => 'required'
+            ],
+            [
+                'email' => 'Vui lòng nhập email',
+                'password' => 'Vui lòng nhập password',
+            ]
+        );
+
         if (Auth::attempt([
                 'email' => $request->input('email'),
                 'password' => $request->input('password')
@@ -27,7 +40,7 @@ class LoginController extends Controller
         )) {
             return redirect()->route('home');
         }
-
+        session()->flash('error', 'Email hoặc Password không đúng');
         return redirect()->back();
     }
 }

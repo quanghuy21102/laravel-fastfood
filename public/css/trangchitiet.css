@@ -29,8 +29,7 @@ header nav.navbar li.nav-item a.nav-link {
 header div.container-fluid a.navbar-brand button {
     margin-right: 10px;
     border-radius: 40px;
-    border: solid;
-    border-color: #ffba08;
+    border: solid #ffba08;
 }
 
 header .input-group {

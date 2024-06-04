@@ -16,11 +16,14 @@ header li button.btn-light {
     border-radius: 75%;
     margin-left: 5px;
     margin-right: 5px;
+    background-color: white;
+    color: #d00000;
 }
 
-header a.navbar-brand,
-header a.nav-link {
+header nav.navbar a.navbar-brand,
+header nav.navbar li.nav-item a.nav-link {
     font-weight: bold;
+    color: white;
 }
 
 header div.container-fluid a.navbar-brand button {
@@ -118,8 +121,7 @@ footer div.row div.col-5 p i {
 footer div.row div.col-5 button {
     margin: 0 0 10px 40px;
     border-radius: 40px;
-    border: solid;
-    border-color: #ffba08;
+    border: solid #ffba08;
 }
 
 footer div.row div.col-3 i {

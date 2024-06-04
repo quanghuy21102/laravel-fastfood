@@ -14,6 +14,8 @@ class HomeController extends Controller
 
     public function index()
     {
-        return view('trangchu');
+        return view('home', [
+            'style' => 'css/trangchu.css',
+        ]);
     }
 }

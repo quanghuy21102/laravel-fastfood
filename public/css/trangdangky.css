@@ -16,11 +16,14 @@ header li button.btn-light {
     border-radius: 75%;
     margin-left: 5px;
     margin-right: 5px;
+    background-color: white;
+    color: #d00000;
 }
 
-header a.navbar-brand,
-header a.nav-link {
+header nav.navbar a.navbar-brand,
+header nav.navbar li.nav-item a.nav-link {
     font-weight: bold;
+    color: white;
 }
 
 header div.container-fluid a.navbar-brand button {
@@ -125,8 +128,7 @@ footer div.row div.col-3 div.input-group i {
 footer div.row div.col-3 div.input-group input,
 footer div.row div.col-3 div.input-group button {
     border-radius: 36px;
-    border: solid;
-    border-color: #f6aa1c;
+    border: solid #f6aa1c;
 }
 
 footer div.row div.col-3 div.input-group button {

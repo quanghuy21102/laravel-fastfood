@@ -7,31 +7,29 @@ body {
 }
 
 header nav {
-    background-color: white;
+    background-color: #d00000;
     padding-left: 50px;
     padding-right: 50px;
-    border-bottom: solid gray;
 }
 
 header li button.btn-light {
     border-radius: 75%;
     margin-left: 5px;
     margin-right: 5px;
-    background-color: #d00000;
-    color: white;
+    background-color: white;
+    color: #d00000;
 }
 
 header nav.navbar a.navbar-brand,
 header nav.navbar li.nav-item a.nav-link {
     font-weight: bold;
-    color: #d00000;
+    color: white;
 }
 
 header div.container-fluid a.navbar-brand button {
     margin-right: 10px;
     border-radius: 40px;
-    border: solid;
-    border-color: #ffba08;
+    border: solid #ffba08;
 }
 
 header .input-group {
