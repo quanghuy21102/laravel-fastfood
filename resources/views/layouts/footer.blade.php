@@ -1,7 +1,7 @@
 <div class="row">
     <div class="col-5">
         <button class="btn btn-light">
-            <img src="images/letter-f.png" height="65px" />
+            <img src="storage/images/logo.png" height="65px" />
         </button>
         <h4>FASTFOOD.COM</h4>
         <p><i class="fa-solid fa-phone"></i>(084) 0123456789</p>

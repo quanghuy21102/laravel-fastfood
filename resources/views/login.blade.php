@@ -1,9 +1,9 @@
-@extends('layouts\main')
+@extends('layouts/main')
 
 @section('content')
     <div class="row pt-5 pb-5">
         <div class="col-6 d-flex justify-content-center align-items-center">
-            <form method="POST" action="/store" class="w-75">
+            <form method="POST" action="/" class="w-75">
                 <h1>Welcome back</h1>
                 <div class="social-auth-links">
                     <button class="btn link-google" style="">

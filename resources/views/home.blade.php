@@ -1,4 +1,4 @@
-@extends('layouts\main')
+@extends('layouts/main')
 
 @section('content')
     <div class="row text-center">
@@ -11,54 +11,20 @@
 
         <h3>Ưu đãi đặc biệt</h3>
         <div class="row">
-            <div class="card">
-                <img
-                    src="images/De lekkerste Rewards en Deals.jpg"
-                    class="card-img-top"
-                    alt="..."
-                />
-                <div class="card-body">
-                    <h5 class="card-title">Burger Phô mai</h5>
-                    <p class="card-text">50.000 đ</p>
-                    <a href="#" class="btn">Thêm</a>
+            @foreach ($products->take(4) as $product)
+                <div class="card">
+                    <img
+                        src="{{ asset($product->image_path) }}"
+                        class="card-img-top"
+                        alt="..."
+                    />
+                    <div class="card-body">
+                        <h5 class="card-title">{{ $product->name }}</h5>
+                        <p class="card-text">{{ $product->price }} đ</p>
+                        <a href="#" class="btn">Thêm</a>
+                    </div>
                 </div>
-            </div>
-            <div class="card">
-                <img
-                    src="images/Dairy Queen Bacon Two Cheese Deluxe Stackburger.jpg"
-                    class="card-img-top"
-                    alt="..."
-                />
-                <div class="card-body">
-                    <h5 class="card-title">Burger Bulgogi</h5>
-                    <p class="card-text">90.000 đ</p>
-                    <a href="#" class="btn">Thêm</a>
-                </div>
-            </div>
-            <div class="card">
-                <img
-                    src="images/McDonald's Mozzarella Sticks with El Maco Sauce.jpg"
-                    class="card-img-top"
-                    alt="..."
-                />
-                <div class="card-body">
-                    <h5 class="card-title">Phô mai que</h5>
-                    <p class="card-text">45.000 đ</p>
-                    <a href="#" class="btn">Thêm</a>
-                </div>
-            </div>
-            <div class="card">
-                <img
-                    src="images/0c1fbd6c-439b-4c5f-9f9d-98af1a2d24eb.jpg"
-                    class="card-img-top"
-                    alt="..."
-                />
-                <div class="card-body">
-                    <h5 class="card-title">Mì Spaghetti</h5>
-                    <p class="card-text">50.000 đ</p>
-                    <a href="#" class="btn">Thêm</a>
-                </div>
-            </div>
+            @endforeach
         </div>
         <div class="row">
             <a href="#" class="btn bg-light">Xem thêm</a>

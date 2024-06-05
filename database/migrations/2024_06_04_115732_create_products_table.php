@@ -16,7 +16,7 @@ return new class extends Migration
             $table->string('image_path')->unique()->nullable(false);
             $table->string('name')->nullable(false);
             $table->string('category')->nullable(false);
-            $table->double('price')->nullable(false);
+            $table->decimal('price', 8, 3)->nullable(false);
             $table->timestamps();
         });
     }
