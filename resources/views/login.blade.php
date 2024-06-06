@@ -35,7 +35,7 @@
                 @csrf
             </form>
         </div>
-        <div class="col-6">
+        <div class="col-6 d-flex justify-content-center align-items-center">
             <img src="images/9d2485b7-c5ca-4ed0-8249-6144cd97347a.jpg" height="400px"/>
         </div>
     </div>

@@ -1,7 +1,7 @@
 @extends('layouts/main')
 
 @section('content')
-    <div class="row">
+    <div class="row pt-5 pb-5">
         <div class="col-6 d-flex justify-content-center align-items-center">
             <form method="post" action="" class="w-75">
                 <h1>Tạo tài khoản</h1>
@@ -41,7 +41,7 @@
                 </div>
             </form>
         </div>
-        <div class="col-6">
+        <div class="col-6 d-flex justify-content-center align-items-center">
             <img
                 src="images/9d2485b7-c5ca-4ed0-8249-6144cd97347a.jpg"
                 height="450px"

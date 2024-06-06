@@ -1,0 +1,39 @@
+header nav {
+    background-color: #d00000;
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+header li button.btn-light {
+    border-radius: 75%;
+    margin-left: 5px;
+    margin-right: 5px;
+    background-color: white;
+    color: #d00000;
+}
+
+header nav.navbar a.navbar-brand,
+header nav.navbar li.nav-item a.nav-link {
+    font-weight: bold;
+    color: white;
+}
+
+header div.container-fluid a.navbar-brand button {
+    margin-right: 10px;
+    border-radius: 40px;
+    border: solid #ffba08;
+}
+
+header .input-group {
+    width: 50%;
+}
+
+header .input-group input {
+    border-radius: 50px;
+    padding-left: 20px;
+}
+
+header .input-group button {
+    background-color: #d00000;
+    border-radius: 50px;
+}

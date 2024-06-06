@@ -6,52 +6,8 @@ body {
     font-family: "Mitr", sans-serif;
 }
 
-header nav {
-    background-color: #d00000;
-    padding-left: 50px;
-    padding-right: 50px;
-}
-
-header li button.btn-light {
-    border-radius: 75%;
-    margin-left: 5px;
-    margin-right: 5px;
-    background-color: white;
-    color: #d00000;
-}
-
-header nav.navbar a.navbar-brand,
-header nav.navbar li.nav-item a.nav-link {
-    font-weight: bold;
-    color: white;
-}
-
-header div.container-fluid a.navbar-brand button {
-    margin-right: 10px;
-    border-radius: 40px;
-    border: solid #ffba08;
-}
-
-header .input-group {
-    width: 50%;
-}
-
-header .input-group input {
-    border-radius: 50px;
-    padding-left: 20px;
-}
-
-header .input-group button {
-    background-color: #d00000;
-    border-radius: 50px;
-}
-
 main div.row {
-    display: flex;
-    justify-content: center;
-    align-items: center;
     height: 100%;
-    padding-left: 120px;
     margin: 0;
 }
 
@@ -96,51 +52,5 @@ main button.btn-form {
 }
 
 main button.btn-form:hover {
-    background-color: #f6aa1c;
-}
-
-footer h4,
-h6 {
-    font-weight: bold;
-}
-
-footer {
-    background-color: #333333;
-    color: #f6aa1c;
-}
-
-footer div.row {
-    margin: 0;
-    padding: 50px;
-}
-
-footer div.row div.col-5 p i {
-    padding-right: 10px;
-}
-
-footer div.row div.col-5 button {
-    margin: 0 0 10px 40px;
-    border-radius: 40px;
-    border: solid #ffba08;
-}
-
-footer div.row div.col-3 i {
-    font-size: 40px;
-    padding-left: 10px;
-}
-
-footer div.row div.col-3 div.input-group i {
-    padding: 0;
-    font-size: 20px;
-}
-
-footer div.row div.col-3 div.input-group input,
-footer div.row div.col-3 div.input-group button {
-    border-radius: 36px;
-    border: solid;
-    border-color: #f6aa1c;
-}
-
-footer div.row div.col-3 div.input-group button {
     background-color: #f6aa1c;
 }

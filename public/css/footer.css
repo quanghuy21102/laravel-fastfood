@@ -1,0 +1,44 @@
+footer h4,
+h6 {
+    font-weight: bold;
+}
+
+footer {
+    background-color: #333333;
+    color: #f6aa1c;
+}
+
+footer div.row {
+    margin: 0;
+    padding: 50px;
+}
+
+footer div.row div.col-5 p i {
+    padding-right: 10px;
+}
+
+footer div.row div.col-5 button {
+    margin: 0 0 10px 40px;
+    border-radius: 40px;
+    border: solid #ffba08;
+}
+
+footer div.row div.col-3 i {
+    font-size: 40px;
+    padding-left: 10px;
+}
+
+footer div.row div.col-3 div.input-group i {
+    padding: 0;
+    font-size: 20px;
+}
+
+footer div.row div.col-3 div.input-group input,
+footer div.row div.col-3 div.input-group button {
+    border-radius: 36px;
+    border: solid #f6aa1c;
+}
+
+footer div.row div.col-3 div.input-group button {
+    background-color: #f6aa1c;
+}
