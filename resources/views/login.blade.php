@@ -30,13 +30,13 @@
                     Sign In
                 </button>
                 <div class="mb-3 text-center" style="margin-top: 10px">
-                    <span>Don't have an account</span><a href="{{route('register')}}">Sign up</a>
+                    <span>Don't have an account</span><a href="{{ route('register') }}">Sign up</a>
                 </div>
                 @csrf
             </form>
         </div>
         <div class="col-6 d-flex justify-content-center align-items-center">
-            <img src="images/9d2485b7-c5ca-4ed0-8249-6144cd97347a.jpg" height="400px"/>
+            <img src="{{ asset('storage/images/ComboGa2.jpg') }}" height="400px"/>
         </div>
     </div>
 @endsection

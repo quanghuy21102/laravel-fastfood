@@ -5,6 +5,7 @@
         <div class="col-6 d-flex justify-content-center align-items-center">
             <form method="post" action="" class="w-75">
                 <h1>Tạo tài khoản</h1>
+                <hr>
                 <div class="mb-3">
                     <label class="form-label">Họ và tên</label>
                     <input
@@ -30,7 +31,7 @@
                     />
                 </div>
                 <button
-                    onclick="window.location.href='trangdangnhap.html'"
+                    onclick="window.location.href='{{ route('login') }}'"
                     type="button"
                     class="btn text-light"
                 >
@@ -43,7 +44,7 @@
         </div>
         <div class="col-6 d-flex justify-content-center align-items-center">
             <img
-                src="images/9d2485b7-c5ca-4ed0-8249-6144cd97347a.jpg"
+                src="{{ asset('storage/images/ComboGa2.jpg') }}"
                 height="450px"
             />
         </div>

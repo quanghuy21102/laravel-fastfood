@@ -78,7 +78,7 @@
         <div class="row">
           <div
             class="col"
-            style="display: flex; justify-content: center; align-items: right"
+            style="display: flex; justify-content: center;"
           >
             <div
               class="card"
@@ -134,7 +134,7 @@
                   placeholder="1"
                   aria-disabled="true"
                   aria-readonly="true"
-                  style="width: 20px; display: flexbox"
+                  style="width: 20px;"
                 />
                 <button
                   class="btn"

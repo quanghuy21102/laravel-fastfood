@@ -84,6 +84,10 @@ main div.row div.card a:hover {
     background-color: rgb(240, 43, 28);
 }
 
+main div.row div.card h5{
+    color: #d00000;
+}
+
 main div.row a.bg-light {
     width: 10%;
     border-radius: 20px;

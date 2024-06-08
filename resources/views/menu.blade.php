@@ -30,7 +30,7 @@
             <div class="card btn btn-primary" onclick="window.scrollTo({
             top: document.getElementById('rice-noodle').offsetTop,
             behavior: 'smooth'})">
-                <div class="row">
+                <div class="row p-0">
                     <img
                         src="storage/images/spaghetti.png"
                         class="card-img card-img-top"
@@ -117,7 +117,7 @@
             @endforeach
         </div>
         <div class="row">
-            <a href="#" class="btn bg-light">Xem thêm</a>
+            <a href="/menu/{{ $combo->category }}" class="btn bg-light">Xem thêm</a>
         </div>
 
         <hr />
@@ -140,7 +140,7 @@
             @endforeach
         </div>
         <div class="row">
-            <a href="#" class="btn bg-light">Xem thêm</a>
+            <a href="/menu/{{ $chicken->category }}" class="btn bg-light">Xem thêm</a>
         </div>
 
         <hr />
@@ -164,7 +164,7 @@
             @endforeach
         </div>
         <div class="row">
-            <a href="#" class="btn bg-light">Xem thêm</a>
+            <a href="/menu/{{ $rice_noodle->category }}" class="btn bg-light">Xem thêm</a>
         </div>
 
         <hr />
@@ -187,7 +187,7 @@
             @endforeach
         </div>
         <div class="row">
-            <a href="#" class="btn bg-light">Xem thêm</a>
+            <a href="/menu/{{ $hamburger->category }}" class="btn bg-light">Xem thêm</a>
         </div>
 
         <hr />
@@ -210,7 +210,7 @@
             @endforeach
         </div>
         <div class="row">
-            <a href="#" class="btn bg-light">Xem thêm</a>
+            <a href="/menu/{{ $icream->category }}" class="btn bg-light">Xem thêm</a>
         </div>
 
         <hr />
@@ -233,7 +233,7 @@
             @endforeach
         </div>
         <div class="row">
-            <a href="#" class="btn bg-light">Xem thêm</a>
+            <a href="/menu/{{ $drink->category }}" class="btn bg-light">Xem thêm</a>
         </div>
 
         <hr />
@@ -256,7 +256,7 @@
             @endforeach
         </div>
         <div class="row">
-            <a href="#" class="btn bg-light">Xem thêm</a>
+            <a href="/menu/{{ $anyfood->category }}" class="btn bg-light">Xem thêm</a>
         </div>
     </div>
 @endsection

@@ -13,8 +13,8 @@ return new class extends Migration
     {
         Schema::create('products', function (Blueprint $table) {
             $table->id();
-            $table->string('image_path')->unique()->nullable(false);
-            $table->string('name')->nullable(false);
+            $table->string('image_path')->nullable(false);
+            $table->string('name')->unique()->nullable(false);
             $table->string('category')->nullable(false);
             $table->decimal('price', 8, 3)->nullable(false);
             $table->timestamps();

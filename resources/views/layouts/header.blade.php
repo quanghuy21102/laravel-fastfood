@@ -2,7 +2,7 @@
     <div class="container-fluid">
         <a class="navbar-brand" href="{{ route('home') }}">
             <button class="btn btn-light">
-                <img src="storage/images/logo.png" height="30px" /></button
+                <img src="{{ asset('storage/images/logo.png') }}" height="30px" /></button
             >FastFood
         </a>
         <div class="input-group">

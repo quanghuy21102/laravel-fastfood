@@ -66,6 +66,11 @@ main div.row div.card p.card-title {
     font-size: 14px;
 }
 
+main div.row div.card h5.card-title {
+    color: #d00000;
+    font-weight: bold;
+}
+
 main div.row div.card p.card-text {
     font-family: "Coiny", sans-serif;
     color: #ffba08;
