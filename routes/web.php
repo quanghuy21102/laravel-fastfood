@@ -8,6 +8,8 @@ use App\Http\Controllers\Backend\HomeController;
 use App\Http\Controllers\Backend\MenuController;
 use App\Http\Controllers\Backend\PagesController;
 
+Route::get('/admin/login', [PagesController::class, 'index_admin'])->name('admin.login');
+
 Route::controller(PagesController::class)->group(function () {
     Route::get('/register','index_register')->name('register');
     Route::get('/login','index_login')->name('login');

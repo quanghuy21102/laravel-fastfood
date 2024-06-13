@@ -9,10 +9,15 @@ use Illuminate\Support\Facades\Auth;
 
 class PagesController extends Controller
 {
+    public function index_admin()
+    {
+        return view('admin.login.index');
+    }
+
     // Trang Register
     public function index_register()
     {
-        return view('register', [
+        return view('user.register.index', [
             'style' => 'css/trangdangky.css'
         ]);
     }
@@ -20,7 +25,7 @@ class PagesController extends Controller
     // Trang Login
     public function index_login()
     {
-        return view('login', [
+        return view('user.login.index', [
             'style' => 'css/trangdangnhap.css'
         ]);
     }
@@ -52,7 +57,7 @@ class PagesController extends Controller
     public function index_home()
     {
         $products = Product::all();
-        return view('home', [
+        return view('user.home.index', [
             'style' => 'css/trangchu.css',
         ], compact('products'));
     }
@@ -69,13 +74,13 @@ class PagesController extends Controller
         $drinks = Product::where('category', 'drink')->get();
         $anyfoods = Product::where('category', 'anyfood')->get();
 
-        return view('menu', [
+        return view('user.menu.index', [
             'style' => 'css/trangthucdon.css',
         ], compact('combos', 'chickens', 'rices_noodles', 'hamburgers', 'icreams', 'drinks', 'anyfoods'));
     }
     public function menu_product()
     {
-        return view('product', [
+        return view('user.product.index', [
             'style' => 'css/trangchitiet.css',
         ]);
     }
@@ -100,7 +105,7 @@ class PagesController extends Controller
             $title = 'Món ăn kèm';
         }
         $products = Product::where('category', $category)->get();
-        return view('category', [
+        return view('user.category.index', [
             'style' => 'css/trangphanloai.css',
         ], compact('products', 'title'));
     }
