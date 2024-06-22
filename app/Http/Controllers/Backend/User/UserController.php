@@ -1,21 +1,16 @@
 <?php
 
-namespace App\Http\Controllers\Backend;
+namespace App\Http\Controllers\Backend\User;
 
 use App\Http\Controllers\Controller;
-use App\Models\Product;
+use App\Models\Account;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
-class PagesController extends Controller
+class UserController extends Controller
 {
-    public function index_admin()
-    {
-        return view('admin.login.index');
-    }
-
     // Trang Register
-    public function index_register()
+    public function indexRegister()
     {
         return view('user.register.index', [
             'style' => 'css/trangdangky.css'
@@ -23,13 +18,13 @@ class PagesController extends Controller
     }
 
     // Trang Login
-    public function index_login()
+    public function indexLogin()
     {
         return view('user.login.index', [
             'style' => 'css/trangdangnhap.css'
         ]);
     }
-    public function form_login(Request $request)
+    public function login(Request $request)
     {
         $request->validate(
             [
@@ -47,16 +42,16 @@ class PagesController extends Controller
                 'password' => $request->input('password')
             ]
         )) {
-            return redirect()->route('home');
+            return redirect()->route('user.home');
         }
         session()->flash('error', 'Email hoặc Password không đúng');
         return redirect()->back();
     }
 
     // Trang chủ
-    public function index_home()
+    public function indexHome()
     {
-        $products = Product::all();
+        $products = Account::all();
         return view('user.home.index', [
             'style' => 'css/trangchu.css',
         ], compact('products'));
@@ -65,16 +60,16 @@ class PagesController extends Controller
     // Trang Menu
     public function index_menu()
     {
-        $products = Product::all();
-        $combos = Product::where('category', 'combo')->get();
-        $chickens = Product::where('category', 'chicken')->get();
-        $rices_noodles = Product::where('category', 'rice-noodle')->get();
-        $hamburgers = Product::where('category', 'hamburger')->get();
-        $icreams = Product::where('category', 'icream')->get();
-        $drinks = Product::where('category', 'drink')->get();
-        $anyfoods = Product::where('category', 'anyfood')->get();
+        $products = Account::all();
+        $combos = Account::where('category', 'combo')->get();
+        $chickens = Account::where('category', 'chicken')->get();
+        $rices_noodles = Account::where('category', 'rice-noodle')->get();
+        $hamburgers = Account::where('category', 'hamburger')->get();
+        $icreams = Account::where('category', 'icream')->get();
+        $drinks = Account::where('category', 'drink')->get();
+        $anyfoods = Account::where('category', 'anyfood')->get();
 
-        return view('user.menu.index', [
+        return view('user.product.index', [
             'style' => 'css/trangthucdon.css',
         ], compact('combos', 'chickens', 'rices_noodles', 'hamburgers', 'icreams', 'drinks', 'anyfoods'));
     }
@@ -104,7 +99,7 @@ class PagesController extends Controller
         } elseif ($category == 'anyfood') {
             $title = 'Món ăn kèm';
         }
-        $products = Product::where('category', $category)->get();
+        $products = Account::where('category', $category)->get();
         return view('user.category.index', [
             'style' => 'css/trangphanloai.css',
         ], compact('products', 'title'));

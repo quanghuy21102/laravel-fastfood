@@ -60,7 +60,7 @@
                 </div>
             </div>
             <div class="card btn btn-primary" onclick="window.scrollTo({
-            top: document.getElementById('icream').offsetTop,
+            top: document.getElementById('ice-cream').offsetTop,
             behavior: 'smooth'})">
                 <img
                     src="storage/images/ice-cream.png"
@@ -84,7 +84,7 @@
                 </div>
             </div>
             <div class="card btn btn-primary" onclick="window.scrollTo({
-            top: document.getElementById('anyfood').offsetTop,
+            top: document.getElementById('any-food').offsetTop,
             behavior: 'smooth'})">
                 <img
                     src="storage/images/anyfood.png"
@@ -192,7 +192,7 @@
 
         <hr />
 
-        <h3 id="icream">Kem</h3>
+        <h3 id="ice-cream">Kem</h3>
         <div class="row">
             @foreach ($icreams as $icream)
                 <div class="card">
@@ -238,7 +238,7 @@
 
         <hr />
 
-        <h3 id="anyfood">Món ăn kèm</h3>
+        <h3 id="any-food">Món ăn kèm</h3>
         <div class="row">
             @foreach ($anyfoods as $anyfood)
                 <div class="card">

@@ -31,14 +31,14 @@
                     />
                 </div>
                 <button
-                    onclick="window.location.href='{{ route('login') }}'"
+                    onclick="window.location.href='{{ route('user.login') }}'"
                     type="button"
                     class="btn text-light"
                 >
                     Sign Up
                 </button>
                 <div class="mb-3 text-center" style="margin-top: 10px">
-                    <span>Already have an account?</span><a href="{{route('login')}}">Sign in</a>
+                    <span>Already have an account?</span><a href="{{ route('user.login') }}">Sign in</a>
                 </div>
             </form>
         </div>

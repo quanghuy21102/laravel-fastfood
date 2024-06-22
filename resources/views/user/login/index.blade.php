@@ -3,7 +3,7 @@
 @section('content')
     <div class="row pt-5 pb-5">
         <div class="col-6 d-flex justify-content-center align-items-center">
-            <form method="POST" action="/" class="w-75">
+            <form method="POST" action="" class="w-75">
                 <h1>Welcome back</h1>
                 <div class="social-auth-links">
                     <button class="btn link-google" style="">
@@ -30,7 +30,7 @@
                     Sign In
                 </button>
                 <div class="mb-3 text-center" style="margin-top: 10px">
-                    <span>Don't have an account</span><a href="{{ route('register') }}">Sign up</a>
+                    <span>Don't have an account</span><a href="{{ route('user.register') }}">Sign up</a>
                 </div>
                 @csrf
             </form>

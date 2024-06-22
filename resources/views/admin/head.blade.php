@@ -11,3 +11,11 @@
 <link rel="stylesheet" href="/templates/admin/plugins/icheck-bootstrap/icheck-bootstrap.min.css">
 <!-- Theme style -->
 <link rel="stylesheet" href="/templates/admin/dist/css/adminlte.min.css">
+
+<meta name="csrf-token" content="{{ csrf_token() }}">
+
+<style>
+    .hidden {
+        display: none;
+    }
+</style>

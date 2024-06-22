@@ -2,6 +2,7 @@
 
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Schema;
 
 return new class extends Migration
@@ -12,12 +13,15 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('products', function (Blueprint $table) {
-            $table->id();
-            $table->string('image_path')->nullable(false);
-            $table->string('name')->unique()->nullable(false);
-            $table->string('category')->nullable(false);
-            $table->decimal('price', 8, 3)->nullable(false);
+            $table->increments('product_id');
+            $table->string('product_name')->nullable();
+            $table->decimal('price',8,3)->nullable();
+            $table->string('category_id');
             $table->timestamps();
+            $table->enum('status', ['active', 'inactive'])->default('active')->nullable();
+            $table->string('image_path')->nullable();
+
+            $table->foreign('category_id')->references('category_id')->on('categories');
         });
     }
 
