@@ -1,4 +1,4 @@
-@extends('user.main')
+@extends('customer.main')
 
 @section('content')
     <div class="row text-center">
@@ -7,19 +7,19 @@
             alt=""
         />
 
-        <hr />
+        <hr/>
 
         <h3>Ưu đãi đặc biệt</h3>
         <div class="row">
             @foreach ($products->take(4) as $product)
-                <div class="card">
+                <div class="card btn" onclick="window.location.href='/menus/{{ $product->category_id }}/{{ $product->product_id }}'">
                     <img
                         src="{{ asset($product->image_path) }}"
                         class="card-img-top"
                         alt="..."
                     />
                     <div class="card-body">
-                        <h5 class="card-title">{{ $product->name }}</h5>
+                        <h5 class="card-title">{{ $product->product_name }}</h5>
                         <p class="card-text">{{ $product->price }} đ</p>
                         <a href="#" class="btn">Thêm</a>
                     </div>
@@ -30,7 +30,7 @@
             <a href="#" class="btn bg-light">Xem thêm</a>
         </div>
 
-        <hr />
+        <hr/>
 
         <h3>Best seller</h3>
         <div class="row">

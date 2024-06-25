@@ -14,11 +14,9 @@ main div.row {
     margin: 0;
 }
 
-main div.row h3 {
+main div.row h2, h5 {
     color: #d00000;
     font-weight: bold;
-    margin-top: 20px;
-    padding-left: 160px;
     text-align: left;
 }
 
@@ -26,6 +24,10 @@ main div.row hr {
     margin-top: 30px;
     width: 50%;
     color: #ff0000;
+}
+
+main div.row h4 {
+    color: #ffba08; font-weight: bold; font-family: 'Coiny', sans-serif;
 }
 
 main div.row div.card {
@@ -88,4 +90,12 @@ main div.row a.bg-light {
     border-radius: 20px;
     border: solid #d00000;
     color: #d00000;
+}
+
+main div.row div.container .btn-count {
+    width: 30px;
+    height: 30px;
+    color: white;
+    background-color: #d00000;
+    border-radius: 10px;
 }

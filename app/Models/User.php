@@ -10,7 +10,6 @@ class User extends Model
 {
     use HasFactory;
 
-    protected $table = 'users';
     protected $primaryKey = 'user_id';
 
     protected $fillable = [
@@ -20,7 +19,6 @@ class User extends Model
         'gender',
         'phone',
         'address',
-        'city',
         'created_at',
         'updated_at',
     ];

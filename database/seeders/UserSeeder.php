@@ -17,12 +17,19 @@ class UserSeeder extends Seeder
         $users = [
             [
                 'account_id' => 1,
+                'full_name' => 'Admin',
+                'birthday' => Carbon::create(2002,11,2),
+                'gender' => 'Nam',
+                'phone' => '0123456789',
+                'address' => '00 Lê Văn Sỹ P13, Q3, TP.HCM',
+            ],
+            [
+                'account_id' => 2,
                 'full_name' => 'Trịnh Quang Huy',
                 'birthday' => Carbon::create(2002,11,2),
                 'gender' => 'Nam',
                 'phone' => '0123456789',
-                'address' => '00 Lê Văn Sỹ P13, Q3',
-                'city' => 'TP.HCM',
+                'address' => '00 Lê Văn Sỹ P13, Q3, TP.HCM',
             ]
         ];
 

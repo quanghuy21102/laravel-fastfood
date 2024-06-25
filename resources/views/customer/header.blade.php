@@ -1,6 +1,6 @@
 <nav class="navbar navbar-expand-lg navbar-light">
     <div class="container-fluid">
-        <a class="navbar-brand" href="{{ route('user.home') }}">
+        <a class="navbar-brand" href="{{ route('customer.home') }}">
             <button class="btn btn-light">
                 <img src="{{ asset('storage/images/logo.png') }}" height="30px" /></button
             >FastFood
@@ -19,7 +19,7 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                 <li class="nav-item">
-                    <a class="nav-link" href="{{ route('product') }}">Thực đơn</a>
+                    <a class="nav-link" href="{{ route('customer.menu') }}">Thực đơn</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#">Khuyến mãi</a>

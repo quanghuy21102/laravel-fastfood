@@ -1,9 +1,9 @@
 <?php
 
-namespace App\Http\Controllers\Backend;
+namespace App\Http\Controllers\Backend\Customer;
 
 use App\Http\Controllers\Controller;
-use App\Models\Account;
+use App\Models\Product;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
@@ -15,8 +15,8 @@ class HomeController extends Controller
 
     public function index()
     {
-        $products = Account::all();
-        return view('home', [
+        $products = Product::all();
+        return view('customer.home', [
             'style' => 'css/trangchu.css',
         ], compact('products'));
     }

@@ -19,7 +19,6 @@ return new class extends Migration
             $table->string('gender')->nullable();
             $table->string('phone')->nullable();
             $table->string('address')->nullable();
-            $table->string('city')->nullable();
             $table->timestamps();
 
             $table->foreign('account_id')->references('account_id')->on('accounts');

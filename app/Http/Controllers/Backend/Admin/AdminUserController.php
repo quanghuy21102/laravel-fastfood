@@ -8,6 +8,11 @@ use Illuminate\Http\Request;
 
 class AdminUserController extends Controller
 {
+
+    public function __construct()
+    {
+
+    }
     /**
      * Display a listing of the resource.
      */
@@ -40,6 +45,7 @@ class AdminUserController extends Controller
      */
     public function show(User $user)
     {
+
         return view('admin.account.show', [
            'title' => 'Xem thông tin chi tiết - Tài khoản khách hàng',
            'user' => $user,

@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Controllers\Backend\User;
+namespace App\Http\Controllers\Backend\Customer;
 
 use App\Http\Controllers\Controller;
 use App\Models\Account;
@@ -12,7 +12,7 @@ class UserController extends Controller
     // Trang Register
     public function indexRegister()
     {
-        return view('user.register.index', [
+        return view('customer.register.index', [
             'style' => 'css/trangdangky.css'
         ]);
     }
@@ -20,7 +20,7 @@ class UserController extends Controller
     // Trang Login
     public function indexLogin()
     {
-        return view('user.login.index', [
+        return view('customer.login.index', [
             'style' => 'css/trangdangnhap.css'
         ]);
     }
@@ -42,7 +42,7 @@ class UserController extends Controller
                 'password' => $request->input('password')
             ]
         )) {
-            return redirect()->route('user.home');
+            return redirect()->route('customer.home');
         }
         session()->flash('error', 'Email hoặc Password không đúng');
         return redirect()->back();
@@ -52,7 +52,7 @@ class UserController extends Controller
     public function indexHome()
     {
         $products = Account::all();
-        return view('user.home.index', [
+        return view('customer.home.index', [
             'style' => 'css/trangchu.css',
         ], compact('products'));
     }
@@ -69,13 +69,13 @@ class UserController extends Controller
         $drinks = Account::where('category', 'drink')->get();
         $anyfoods = Account::where('category', 'anyfood')->get();
 
-        return view('user.product.index', [
+        return view('customer.product.index', [
             'style' => 'css/trangthucdon.css',
         ], compact('combos', 'chickens', 'rices_noodles', 'hamburgers', 'icreams', 'drinks', 'anyfoods'));
     }
     public function menu_product()
     {
-        return view('user.product.index', [
+        return view('customer.product.index', [
             'style' => 'css/trangchitiet.css',
         ]);
     }
@@ -100,7 +100,7 @@ class UserController extends Controller
             $title = 'Món ăn kèm';
         }
         $products = Account::where('category', $category)->get();
-        return view('user.category.index', [
+        return view('customer.category.index', [
             'style' => 'css/trangphanloai.css',
         ], compact('products', 'title'));
     }

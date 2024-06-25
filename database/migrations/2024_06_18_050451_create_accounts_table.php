@@ -13,9 +13,9 @@ return new class extends Migration
     {
         Schema::create('accounts', function (Blueprint $table) {
             $table->increments('account_id');
-            $table->string('email')->nullable();
+            $table->string('email')->unique()->nullable();
             $table->string('password')->nullable();
-            $table->string('role')->nullable();
+            $table->enum('role',['admin','customer'])->default('customer')->nullable();
             $table->timestamps();
         });
     }

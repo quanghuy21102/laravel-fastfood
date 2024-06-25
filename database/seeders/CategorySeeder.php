@@ -15,32 +15,32 @@ class CategorySeeder extends Seeder
     {
         $categories = [
             [
-                'category_id' => 'CO',
-                'category_name' => 'combo',
+                'category_id' => 'combo',
+                'category_name' => 'Combo',
             ],
             [
-                'category_id' => 'CH',
-                'category_name' => 'chicken',
+                'category_id' => 'chicken',
+                'category_name' => 'Gà rán',
             ],
             [
-                'category_id' => 'RN',
-                'category_name' => 'rice_noodle',
+                'category_id' => 'rice-noodle',
+                'category_name' => 'Cơm - Mì Ý',
             ],
             [
-                'category_id' => 'HA',
-                'category_name' => 'hamburger',
+                'category_id' => 'hamburger',
+                'category_name' => 'Hamburger',
             ],
             [
-                'category_id' => 'IC',
-                'category_name' => 'ice_cream',
+                'category_id' => 'ice-cream',
+                'category_name' => 'Kem',
             ],
             [
-                'category_id' => 'DR',
-                'category_name' => 'drink',
+                'category_id' => 'drink',
+                'category_name' => 'Thức uống',
             ],
             [
-                'category_id' => 'AN',
-                'category_name' => 'anyfood',
+                'category_id' => 'any-food',
+                'category_name' => 'Món ăn kèm',
             ],
         ];
 

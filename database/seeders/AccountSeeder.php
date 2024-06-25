@@ -22,14 +22,12 @@ class AccountSeeder extends Seeder
                 'email' => 'admin@admin.com',
                 'password' => '123456',
                 'role' => 'admin',
-                'created_at' => $currentTime,
-                'updated_at' => $currentTime,
             ],
-//            [
-//                'email' => 'trinhquanghuy@gmail.com',
-//                'password' => Hash::make('123456'),
-//                'role' => 'customer',
-//            ],
+            [
+                'email' => 'trinhquanghuy@gmail.com',
+                'password' => '123456',
+                'role' => 'customer',
+            ],
         ];
 
         foreach ($accounts as $key => $value) {

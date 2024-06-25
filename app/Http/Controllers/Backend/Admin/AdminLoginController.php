@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Backend\Admin;
 
 use App\Http\Controllers\Controller;
+use App\Models\Account;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
@@ -28,11 +29,13 @@ class AdminLoginController extends Controller
             ]
         );
 
+        $admin = Account::where('email', $request->input('email'))->first();
+
         if (Auth::attempt([
                 'email' => $request->input('email'),
                 'password' => $request->input('password')
             ]
-        )) {
+        ) && ($admin->role == 'admin')) {
             return redirect()->route('admin.home');
         }
         session()->flash('error', 'Email hoặc Password không đúng');

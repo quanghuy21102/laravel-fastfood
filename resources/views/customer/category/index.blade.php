@@ -1,11 +1,11 @@
-@extends('user.main')
+@extends('customer.main')
 
 @section('content')
     <div class="row text-center">
         <div class="row">
             <div
-                class="card btn btn-primary"
-                onclick="window.scrollTo({
+                    class="card btn btn-primary"
+                    onclick="window.scrollTo({
             top: document.getElementById('combo').offsetTop,
             behavior: 'smooth'})"
             >
@@ -15,8 +15,8 @@
                 </div>
             </div>
             <div
-                class="card btn btn-primary"
-                onclick="window.scrollTo({
+                    class="card btn btn-primary"
+                    onclick="window.scrollTo({
             top: document.getElementById('chicken').offsetTop,
             behavior: 'smooth'})"
             >
@@ -26,8 +26,8 @@
                 </div>
             </div>
             <div
-                class="card btn btn-primary"
-                onclick="window.scrollTo({
+                    class="card btn btn-primary"
+                    onclick="window.scrollTo({
             top: document.getElementById('rice-noodle').offsetTop,
             behavior: 'smooth'})"
             >
@@ -41,8 +41,8 @@
                 </div>
             </div>
             <div
-                class="card btn btn-primary"
-                onclick="window.scrollTo({
+                    class="card btn btn-primary"
+                    onclick="window.scrollTo({
             top: document.getElementById('hamburger').offsetTop,
             behavior: 'smooth'})"
             >
@@ -52,8 +52,8 @@
                 </div>
             </div>
             <div
-                class="card btn btn-primary"
-                onclick="window.scrollTo({
+                    class="card btn btn-primary"
+                    onclick="window.scrollTo({
             top: document.getElementById('icream').offsetTop,
             behavior: 'smooth'})"
             >
@@ -63,8 +63,8 @@
                 </div>
             </div>
             <div
-                class="card btn btn-primary"
-                onclick="window.scrollTo({
+                    class="card btn btn-primary"
+                    onclick="window.scrollTo({
             top: document.getElementById('drink').offsetTop,
             behavior: 'smooth'})"
             >
@@ -74,8 +74,8 @@
                 </div>
             </div>
             <div
-                class="card btn btn-primary"
-                onclick="window.scrollTo({
+                    class="card btn btn-primary"
+                    onclick="window.scrollTo({
             top: document.getElementById('anyfood').offsetTop,
             behavior: 'smooth'})"
             >
@@ -90,11 +90,11 @@
 
         <h3>{{ $title }}</h3>
         <div class="row">
-            @foreach ($products as $product)
-                <div class="card">
+            @foreach ($products as $key => $product)
+                <div class="card btn" onclick="window.location.href='/menus/{{ $product->category_id }}/{{ $product->product_id }}'">
                     <img src="{{ asset($product->image_path) }}" class="card-img-top" alt="..."/>
                     <div class="card-body">
-                        <h5 class="card-title">{{ $product->name }}</h5>
+                        <h5 class="card-title">{{ $product->product_name }}</h5>
                         <p class="card-text">{{ $product->price }} đ</p>
                         <a href="#" class="btn">Thêm</a>
                     </div>

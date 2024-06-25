@@ -1,18 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    @include('user.head')
+    @include('customer.head')
 </head>
 
 <body>
 <header>
-    @include('user.header')
+    @include('customer.header')
 </header>
 <main>
     @yield('content')
 </main>
 <footer>
-    @include('user.footer')
+    @include('customer.footer')
 </footer>
 </body>
 </html>

@@ -1,8 +1,9 @@
 <?php
 
-namespace App\Http\Controllers\Backend;
+namespace App\Http\Controllers\Backend\Customer;
 
 use App\Http\Controllers\Controller;
+use App\Models\Account;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
@@ -15,7 +16,7 @@ class LoginController extends Controller
 
     public function index()
     {
-        return view('login', [
+        return view('customer.login.index', [
             'style' => 'css/trangdangnhap.css'
         ]);
     }
@@ -33,12 +34,14 @@ class LoginController extends Controller
             ]
         );
 
+        $customer = Account::where('email', $request->input('email'))->first();
+
         if (Auth::attempt([
                 'email' => $request->input('email'),
-                'password' => $request->input('password')
+                'password' => $request->input('password'),
             ]
-        )) {
-            return redirect()->route('home');
+        ) && ($customer->role == 'customer')){
+            return redirect()->route('customer.home');
         }
         session()->flash('error', 'Email hoặc Password không đúng');
         return redirect()->back();

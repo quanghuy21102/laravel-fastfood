@@ -13,6 +13,8 @@ class Account extends Authenticatable
 {
     use HasFactory, Notifiable;
 
+    protected $primaryKey = 'account_id';
+
     /**
      * The attributes that are mass assignable.
      *
